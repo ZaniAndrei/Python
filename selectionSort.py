@@ -1,3 +1,4 @@
+
 def selectionSort(vetor, opcao):
     n = len(vetor)
     iteracoes = 0
@@ -10,8 +11,7 @@ def selectionSort(vetor, opcao):
                     menor = i
             if k != menor:
                 vetor[menor], vetor[k] = vetor[k], vetor[menor]
-                print("Trocou " + str(vetor[menor]) + " por " + str(vetor[k]) + '\n' + str(vetor) + '\n')
-        print("Houveram " + str(iteracoes) + " iterações")        
+                print("Trocou " + str(vetor[menor]) + " por " + str(vetor[k]) + '\n' + str(vetor) + '\n')      
     if(opcao == "decrescente"): 
         for k in range(0, n - 1):
             iteracoes += 1
@@ -21,9 +21,9 @@ def selectionSort(vetor, opcao):
                     maior = i
             if k != maior:
                 vetor[maior], vetor[k] = vetor[k], vetor[maior]   
-                print("Trocou " + str(vetor[maior]) + " por " + str(vetor[k]) + '\n' + str(vetor) + '\n')        
-        print("Houveram " + str(iteracoes) + " iterações")    
+                print("Trocou " + str(vetor[maior]) + " por " + str(vetor[k]) + '\n' + str(vetor) + '\n')                    
+    print("Houveram " + str(iteracoes) + " iterações")        
                
 vetor = [4, -38, -60, 36, 33, 10, 20, 69, -80, -39, 35, -34, -45, -100, -13]       
-selectionSort(vetor, "crescente")
+selectionSort(vetor, "decrescente")
 print(vetor)
