@@ -10,7 +10,8 @@ def storageCompactor(jogos, compactado):
 def chaveCanonica(linha):
     registro = linha.split("|")
     game = Game(nome = registro[0], ano = registro[4]) 
-    
+    #print(registro[4])
+
     temp = game.getNome() + game.getAno()
     temp = temp.replace(" ", "")
     temp = temp.upper()
@@ -49,6 +50,8 @@ def main():
         #print(game.getAno())
     #print(text)
     #print(chaveCanonica(jogos))
+
+    
 
 if __name__ == '__main__':
     main()    
